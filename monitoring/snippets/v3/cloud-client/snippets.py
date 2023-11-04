@@ -118,8 +118,10 @@ def list_time_series(project_id: str) -> pagers.ListTimeSeriesPager:
         Iterating over this object will yield results and resolve additional pages automatically.
     """
     # [START monitoring_read_timeseries_simple]
+    import time
     from google.cloud import monitoring_v3
 
+    project_id = 'YOUR_PROJECT_ID'
     client = monitoring_v3.MetricServiceClient()
     project_name = f"projects/{project_id}"
 
